@@ -1,4 +1,4 @@
-package reponsibility;
+package behavioral;
 
 public class ChainOfResponsibilityPattern {
 	private DispenseChain c1;
@@ -50,7 +50,7 @@ class Won100Dispenser implements DispenseChain {
 			int num = cur.getAmount() / 100;
 			int remainder = cur.getAmount() % 100;
 
-			System.out.println("Dispensing " + num + " 100â‚© note");
+			System.out.println("Dispensing " + num + " 100?‚© note");
 
 			if (remainder != 0)
 				this.chain.dispense(new Currency(remainder));
@@ -73,7 +73,7 @@ class Won10Dispenser implements DispenseChain {
 			int num = cur.getAmount() / 10;
 			int remainder = cur.getAmount() % 10;
 
-			System.out.println("Dispensing " + num + " 10â‚© note");
+			System.out.println("Dispensing " + num + " 10?‚© note");
 
 			if (remainder != 0)
 				this.chain.dispense(new Currency(remainder));
@@ -93,6 +93,6 @@ class Won1Dispenser implements DispenseChain {
 	@Override
 	public void dispense(Currency cur) {
 		int num = cur.getAmount() / 1;
-		System.out.println("Dispensing " + num + " 1â‚© note");
+		System.out.println("Dispensing " + num + " 1?‚© note");
 	}
 }
