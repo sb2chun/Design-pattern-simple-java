@@ -1,4 +1,4 @@
-package reponsibility;
+package behavioral;
 
 public class TemplateMethodPattern {
 	public static void main(String[] args) {
